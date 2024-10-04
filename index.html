@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mappa Interattiva di Arda</title>
+    <!-- Collegamento al CSS -->
+    <link rel="stylesheet" href="css/stile.css">
+</head>
+<body>
+
+<div class="overlay" id="overlay" hidden></div>
+    
+    <div class="map-container">
+	
+        <!-- Immagine della mappa -->
+        <img src="assets/mappa-mondo.jpg" alt="Mappa del Mondo Immaginario" class="map-image">
+
+        <!-- Icona interattiva per Luogo 1 -->
+        <div class="icon luogo1" data-location="luogo1">
+            <img src="assets/icona_elfi.png" alt="Icona Luogo 1">
+        </div>
+
+        <!-- Popup per Luogo 1 -->
+        <div class="popup" id="popup-luogo1" aria-labelledby="popup-luogo1-title" aria-hidden="true">
+            <button class="close-popup" aria-label="Chiudi popup">&times;</button>
+            <img src="assets/Gondolin.jpg" alt="Immagine del Luogo 1">
+            <p id="popup-luogo1-title"> <strong> La città nascosta di Gondolin. </strong> <br> Ultima dimora degli elfi nel Beleriand.</p>
+        </div>
+
+        <!-- Icona interattiva per Luogo 2 -->
+        <div class="icon luogo2" data-location="luogo2">
+            <img src="assets/icona_elfi.png" alt="Icona Luogo 2">
+        </div>
+
+        <!-- Popup per Luogo 2 -->
+        <div class="popup" id="popup-luogo2" aria-labelledby="popup-luogo2-title" aria-hidden="true">
+            <button class="close-popup" aria-label="Chiudi popup">&times;</button>
+            <img src="assets/Lindon.jpeg" alt="Immagine del Luogo 2">
+            <p id="popup-luogo2-title"> <strong> Lindon. </strong> <br> Città principale degli elfi nella Terra di Mezzo e dimora dell'Alto Re Gil-Galad.</p>
+        </div>
+		
+		 <!-- Icona interattiva per Luogo 3 -->
+        <div class="icon luogo3" data-location="luogo3">
+            <img src="assets/icona_orchi.png" alt="Icona Luogo 3">
+        </div>
+
+        <!-- Popup per Luogo 3 -->
+        <div class="popup" id="popup-luogo3" aria-labelledby="popup-luogo3-title" aria-hidden="true">
+            <button class="close-popup" aria-label="Chiudi popup">&times;</button>
+            <img src="assets/Angband.jpeg" alt="Immagine del Luogo 3">
+            <p id="popup-luogo3-title"> <strong> Angband. </strong> <br> La fortezza sotterranea di Morgoth </p>
+        </div>
+		
+		<!-- Icona interattiva per Luogo 4 -->
+        <div class="icon luogo4" data-location="luogo4">
+            <img src="assets/icona_orchi.png" alt="Icona Luogo 4">
+        </div>
+
+        <!-- Popup per Luogo 4 -->
+        <div class="popup" id="popup-luogo4" aria-labelledby="popup-luogo4-title" aria-hidden="true">
+            <button class="close-popup" aria-label="Chiudi popup">&times;</button>
+            <img src="assets/Thangorodrim.jpeg" alt="Immagine del Luogo 4">
+            <p id="popup-luogo4-title"> <strong> Thangorodrim. </strong> <br> I 3 picchi a guardia delle terre di Morgoth. </p>
+        </div>
+		
+		<!-- Icona interattiva per Luogo 5 -->
+        <div class="icon luogo5" data-location="luogo5">
+            <img src="assets/icona_elfi.png" alt="Icona Luogo 5">
+        </div>
+
+        <!-- Popup per Luogo 5 -->
+        <div class="popup" id="popup-luogo5" aria-labelledby="popup-luogo5-title" aria-hidden="true">
+            <button class="close-popup" aria-label="Chiudi popup">&times;</button>
+            <img src="assets/ValinorTrees.jpg" alt="Immagine del Luogo 5">
+            <p id="popup-luogo5-title"> <strong> Laurelin e Telperion. </strong> <br> I 2 alberi di Valinor. </p>
+        </div>
+		
+		<!-- Icona interattiva per Luogo 6 -->
+        <div class="icon luogo6" data-location="luogo6">
+            <img src="assets/icona_elfi.png" alt="Icona Luogo 6">
+        </div>
+
+        <!-- Popup per Luogo 6 -->
+        <div class="popup" id="popup-luogo6" aria-labelledby="popup-luogo6-title" aria-hidden="true">
+            <button class="close-popup" aria-label="Chiudi popup">&times;</button>
+            <img src="assets/Valmar.jpeg" alt="Immagine del Luogo 6">
+            <p id="popup-luogo6-title"> <strong> Valmar. </strong> <br> Capitale di Valinor e dimora dei Valar. </p>
+        </div>
+		
+		<!-- Icona interattiva per Luogo 7 -->
+        <div class="icon luogo7" data-location="luogo7">
+            <img src="assets/icona_elfi.png" alt="Icona Luogo 7">
+        </div>
+
+        <!-- Popup per Luogo 7 -->
+        <div class="popup" id="popup-luogo7" aria-labelledby="popup-luogo7-title" aria-hidden="true">
+            <button class="close-popup" aria-label="Chiudi popup">&times;</button>
+            <img src="assets/Taniquetil.jpg" alt="Immagine del Luogo 7">
+            <p id="popup-luogo7-title"> <strong> Taniquetil. </strong> <br> La Montagna Sacra è il monte più alto di Valinor.<br> Dimora di  Manwë e Varda, re e regina dei Valar. <br> La montagna è anche dimora delle grandi acquile. </p>
+        </div>
+		
+		<!-- Icona interattiva per Luogo 8 -->
+        <div class="icon luogo8" data-location="luogo8">
+            <img src="assets/icona_elfi.png" alt="Icona Luogo 8">
+        </div>
+
+        <!-- Popup per Luogo 8 -->
+        <div class="popup" id="popup-luogo8" aria-labelledby="popup-luogo8-title" aria-hidden="true">
+            <button class="close-popup" aria-label="Chiudi popup">&times;</button>
+            <img src="assets/Tirion.jpg" alt="Immagine del Luogo 8">
+            <p id="popup-luogo8-title"> <strong> Tirion. </strong> <br> La città di Tirion a guardia del passo che dai Monti Pelori porta al Reame Beato di Valinor. <br> Si dice che i marinai che si spingono molto ad Ovest riescano a scorgere la luce del suo faro argentato all'orizzonte </p>
+        </div>
+		
+    </div>
+
+    <!-- Collegamento al JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

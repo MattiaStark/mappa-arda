@@ -1,0 +1,179 @@
+/* Stile per il contenitore della mappa */
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Occupa l'intera altezza del viewport */
+    overflow: hidden;
+}
+
+/* Stile per l'immagine della mappa */
+.map-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Stile per le icone interattive */
+.icon {
+    position: absolute;
+    cursor: pointer;
+    transform: translate(-50%, -50%); /* Centra l'icona */
+}
+
+.luogo1 {
+    top: 19%;
+    left: 55.5%;
+}
+
+.luogo2 {
+    top: 28%;
+    left: 63.5%;
+}
+
+.luogo3 {
+    top: 6%;
+    left: 62%;
+}
+
+.luogo4 {
+    top: 10%;
+    left: 60%;
+}
+
+.luogo5 {
+    top: 25%;
+    left: 25%;
+}
+
+.luogo6 {
+    top: 27%;
+    left: 30.5%;
+}
+
+.luogo7 {
+    top: 20%;
+    left: 37%;
+}
+
+.luogo8 {
+    top: 37%;
+    left: 31%;
+}
+
+/* Stile per le immagini delle icone */
+.icon img {
+    width: 1vw; /* 3% della larghezza del viewport */
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.icon img:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .icon img {
+        width: 5vw; /* Aumenta le dimensioni per schermi più piccoli */
+    }
+}
+
+/* Stile per i popup */
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2vw;
+    border-radius: 1vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1000;
+    max-width: 80%;
+    width: 30vw;
+    text-align: center;
+}
+
+.popup.show {
+    display: block;
+}
+
+/* Stile per il pulsante di chiusura */
+.close-popup {
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+    background: none;
+    border: none;
+    font-size: 2vw;
+    cursor: pointer;
+}
+
+/* Stile per l'immagine all'interno del popup */
+.popup img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5vw;
+    margin-bottom: 1.5vw;
+}
+
+/* Stile per il testo all'interno del popup */
+.popup p {
+    font-size: 1.2vw;
+    color: #333;
+}
+
+/* Stile per l'overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.overlay.show {
+    display: block;
+}
+
+/* Media Queries per dispositivi mobili */
+@media (max-width: 768px) {
+    .icon img {
+        width: 5vw;
+    }
+
+    .popup {
+        padding: 4vw;
+        width: 80vw;
+    }
+
+    .close-popup {
+        font-size: 4vw;
+    }
+
+    .popup p {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .icon img {
+        width: 6vw;
+    }
+
+    .popup {
+        padding: 5vw;
+        width: 90vw;
+    }
+
+    .close-popup {
+        font-size: 5vw;
+    }
+
+    .popup p {
+        font-size: 2.5vw;
+    }
+}
